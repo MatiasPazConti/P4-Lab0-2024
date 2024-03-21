@@ -1,3 +1,6 @@
+#ifndef LIBRO
+#define LIBRO
+
 #include "./Informacion.hh"
 
 #include <iostream>
@@ -22,3 +25,5 @@ public:
     Libro(std::string, std::set<std::string>, std::string);
     ~Libro();
 };
+
+#endif

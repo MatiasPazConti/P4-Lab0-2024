@@ -1,7 +1,9 @@
 #include "../include/Estudiante.hh"
 
 std::string Estudiante::toString() {}
-std::set<std::string> Estudiante::listarInfo(DTFecha) {}
+std::set<std::string> Estudiante::listarInfo(DTFecha f)
+{
+}
 void Estudiante::setNombre(std::string n)
 {
   nombre = n;

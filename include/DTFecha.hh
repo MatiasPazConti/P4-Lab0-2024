@@ -1,3 +1,6 @@
+#ifndef DT_FECHA
+#define DT_FECHA
+
 class DTFecha
 {
 private:
@@ -13,3 +16,5 @@ public:
   DTFecha(int, int, int);
   ~DTFecha();
 };
+
+#endif

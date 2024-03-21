@@ -1,5 +1,9 @@
 #include "../include/Informacion.hh"
 
+void Informacion::agregarEstudiante(Estudiante *e)
+{
+}
+
 std::string Informacion::toString() {}
 void Informacion::setIdentificador(int i)
 {
