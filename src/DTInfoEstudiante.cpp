@@ -19,3 +19,8 @@ DTInfoEstudiante::DTInfoEstudiante(int c, std::string n, int id)
   identificadorInfo = id;
 }
 DTInfoEstudiante::~DTInfoEstudiante() {}
+// Sobrecarga de operador '<<'
+void DTInfoEstudiante::setPrint(std::ostream &out)
+{
+  out << ci << ", " << nombreEst << ", " << identificadorInfo;
+}
