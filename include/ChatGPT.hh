@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-class chatGPT : public Informacion
+class ChatGPT : public Informacion
 {
 private:
   std::string pregunta;
@@ -14,6 +14,6 @@ public:
   void setRespuesta(std::string);
   std::string getPregunta();
   std::string getRespuesta();
-  chatGPT();
-  ~chatGPT();
+  ChatGPT(std::string, std::string);
+  ~ChatGPT();
 };
