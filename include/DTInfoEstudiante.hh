@@ -11,6 +11,7 @@ public:
   int getCI();
   int getIdentificadorInfo();
   std::string getNombreEst();
+  DTInfoEstudiante();
   DTInfoEstudiante(int, std::string, int);
   ~DTInfoEstudiante();
 };

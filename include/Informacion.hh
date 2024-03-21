@@ -15,5 +15,6 @@ public:
   int getIdentificador();
   DTFecha getFecha();
   Informacion();
+  Informacion(int, DTFecha);
   ~Informacion();
 };

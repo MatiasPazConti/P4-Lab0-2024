@@ -19,6 +19,7 @@ public:
     std::string getNombre();
     int getCI();
     std::string getEmail();
+    Estudiante();
     Estudiante(std::string, int, std::string);
     ~Estudiante();
 };
