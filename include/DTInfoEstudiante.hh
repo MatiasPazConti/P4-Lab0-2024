@@ -17,6 +17,9 @@ public:
   DTInfoEstudiante();
   DTInfoEstudiante(int, std::string, int);
   ~DTInfoEstudiante();
+  void setPrint(std::ostream &out);
 };
+
+std::ostream &operator<<(std::ostream &out, DTInfoEstudiante &obj);
 
 #endif

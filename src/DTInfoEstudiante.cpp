@@ -19,3 +19,7 @@ DTInfoEstudiante::DTInfoEstudiante(int c, std::string n, int id)
   identificadorInfo = id;
 }
 DTInfoEstudiante::~DTInfoEstudiante() {}
+void DTInfoEstudiante::setPrint(std::ostream &out)
+{
+  out << ci << ", " << nombreEst << ", " << identificadorInfo;
+}
