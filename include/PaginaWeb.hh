@@ -17,6 +17,7 @@ public:
     std::string getTitulo();
     std::string getLink();
     std::string getText();
+    PaginaWeb();
     PaginaWeb(std::string, std::string, std::string);
     ~PaginaWeb();
 };

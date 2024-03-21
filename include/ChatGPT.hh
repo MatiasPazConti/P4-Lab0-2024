@@ -14,6 +14,7 @@ public:
   void setRespuesta(std::string);
   std::string getPregunta();
   std::string getRespuesta();
+  ChatGPT();
   ChatGPT(std::string, std::string);
   ~ChatGPT();
 };

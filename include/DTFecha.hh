@@ -9,6 +9,7 @@ public:
   int getDia();
   int getMes();
   int getAnio();
+  DTFecha();
   DTFecha(int, int, int);
   ~DTFecha();
 };

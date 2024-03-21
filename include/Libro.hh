@@ -18,6 +18,7 @@ public:
     std::string getTitulo();
     std::set<std::string> getAutores();
     std::string getResumen();
+    Libro();
     Libro(std::string, std::set<std::string>, std::string);
     ~Libro();
 };
