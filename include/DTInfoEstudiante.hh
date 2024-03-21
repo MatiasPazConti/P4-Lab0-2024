@@ -17,9 +17,9 @@ public:
   DTInfoEstudiante();
   DTInfoEstudiante(int, std::string, int);
   ~DTInfoEstudiante();
-  void setPrint(std::ostream &out);
+  void setPrint(std::ostream &out); // Sobrecarga de operador '<<'
 };
 
-std::ostream &operator<<(std::ostream &out, DTInfoEstudiante &obj);
+std::ostream &operator<<(std::ostream &out, DTInfoEstudiante &obj); // cout DTInfoEstudiante
 
 #endif
