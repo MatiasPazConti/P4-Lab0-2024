@@ -1,3 +1,6 @@
+#ifndef DT_INFO_ESTUDIANTE
+#define DT_INFO_ESTUDIANTE
+
 #include <iostream>
 
 class DTInfoEstudiante
@@ -15,3 +18,5 @@ public:
   DTInfoEstudiante(int, std::string, int);
   ~DTInfoEstudiante();
 };
+
+#endif

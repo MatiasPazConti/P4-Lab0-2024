@@ -1,6 +1,28 @@
 #include "../include/Informacion.hh"
 
-std::string Informacion::toString() {}
+void Informacion::agregarEstudiante(Estudiante *e)
+{
+  guardadoPor.insert(e);
+}
+void Informacion::eliminarEstudiante(Estudiante *e)
+{
+  guardadoPor.erase(e);
+}
+Estudiante *Informacion::getEstudiante(int ci)
+{
+  for (std::set<Estudiante *>::iterator it = guardadoPor.begin(); it != guardadoPor.end(); ++it)
+  {
+    if ((*it)->getCI() == ci)
+    {
+      return *it;
+    }
+  }
+  return NULL;
+}
+
+std::string Informacion::toString()
+{
+}
 void Informacion::setIdentificador(int i)
 {
   identificador = i;

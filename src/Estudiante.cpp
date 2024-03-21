@@ -1,7 +1,27 @@
 #include "../include/Estudiante.hh"
-
+void Estudiante::agregarInformacion(Informacion *i)
+{
+  infoGuardada.insert(i);
+}
+void Estudiante::eliminarInformacion(Informacion *i)
+{
+  infoGuardada.erase(i);
+}
+Informacion *Estudiante::getInformacion(int id)
+{
+  for (std::set<Informacion *>::iterator it = infoGuardada.begin(); it != infoGuardada.end(); ++it)
+  {
+    if ((*it)->getIdentificador() == id)
+    {
+      return *it;
+    }
+  }
+  return NULL;
+}
 std::string Estudiante::toString() {}
-std::set<std::string> Estudiante::listarInfo(DTFecha) {}
+std::set<std::string> Estudiante::listarInfo(DTFecha f)
+{
+}
 void Estudiante::setNombre(std::string n)
 {
   nombre = n;

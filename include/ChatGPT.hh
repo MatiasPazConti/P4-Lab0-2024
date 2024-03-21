@@ -1,3 +1,6 @@
+#ifndef CHAT_GPT
+#define CHAT_GPT
+
 #include "./Informacion.hh"
 
 #include <iostream>
@@ -18,3 +21,5 @@ public:
   ChatGPT(std::string, std::string);
   ~ChatGPT();
 };
+
+#endif

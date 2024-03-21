@@ -1,3 +1,6 @@
+#ifndef PAGINA_WEB
+#define PAGINA_WEB
+
 #include "./Informacion.hh"
 
 #include <iostream>
@@ -21,3 +24,5 @@ public:
     PaginaWeb(std::string, std::string, std::string);
     ~PaginaWeb();
 };
+
+#endif
