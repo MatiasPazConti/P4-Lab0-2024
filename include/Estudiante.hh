@@ -19,6 +19,8 @@ private:
 
 public:
     void agregarInformacion(Informacion *);
+    void eliminarInformacion(Informacion *);
+    Informacion *getInformacion(int);
 
     std::string toString();
     std::set<std::string> listarInfo(DTFecha);

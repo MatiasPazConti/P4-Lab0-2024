@@ -18,6 +18,8 @@ private:
 
 public:
   void agregarEstudiante(Estudiante *);
+  void eliminarEstudiante(Estudiante *);
+  Estudiante *getEstudiante(int);
 
   virtual std::string toString();
   void setIdentificador(int);
