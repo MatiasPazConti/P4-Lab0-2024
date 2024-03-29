@@ -31,7 +31,7 @@ std::set<std::string> Estudiante::listarInfo(DTFecha desde)
     }
   }
   return retorno;
-} 
+}
 
 
 void Estudiante::setNombre(std::string n)
