@@ -15,6 +15,8 @@ public:
   DTFecha();
   DTFecha(int, int, int);
   ~DTFecha();
+  std::string toString();
+  int compararFecha(DTFecha fecha);
 };
 
 #endif

@@ -19,9 +19,21 @@ Informacion *Estudiante::getInformacion(int id)
   return NULL;
 }
 std::string Estudiante::toString() {}
-std::set<std::string> Estudiante::listarInfo(DTFecha f)
+
+std::set<std::string> Estudiante::listarInfo(DTFecha desde)
 {
+  std::set<Informacion*> retorno;
+  for (std::set<Informacion *>::iterator it = infoGuardada.begin(); it != infoGuardada.end(); ++it)
+  {
+    if ((*it)->getFecha().compararFecha(desde) == 1)
+    {
+      retorno.include(*it);
+    }
+  }
+  return retorno;
 }
+
+
 void Estudiante::setNombre(std::string n)
 {
   nombre = n;
@@ -53,3 +65,4 @@ Estudiante::Estudiante(std::string n, int c, std::string e)
   email = e;
 }
 Estudiante::~Estudiante() {}
+

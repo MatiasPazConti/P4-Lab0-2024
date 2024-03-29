@@ -21,7 +21,7 @@ public:
   void eliminarEstudiante(Estudiante *);
   Estudiante *getEstudiante(int);
 
-  virtual std::string toString();
+  virtual std::string toString() = 0;
   void setIdentificador(int);
   void setFecha(DTFecha);
   int getIdentificador();
