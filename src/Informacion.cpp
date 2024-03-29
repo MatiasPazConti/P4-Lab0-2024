@@ -20,9 +20,7 @@ Estudiante *Informacion::getEstudiante(int ci)
   return NULL;
 }
 
-std::string Informacion::toString()
-{
-}
+
 void Informacion::setIdentificador(int i)
 {
   identificador = i;

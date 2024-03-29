@@ -1,6 +1,12 @@
 #include "../include/PaginaWeb.hh"
 
-std::string PaginaWeb::toString() {}
+std::string PaginaWeb::toString() {
+    std::string retorno;
+   
+    retorno = "PaginaWeb: "+=to_string(getIdentificador()) +=", "+= getFecha().toString() +=", "+= getTitulo()+=", "+ getLink()+=", "+=getText(); 
+    return retorno;
+}
+
 void PaginaWeb::setTitulo(std::string t)
 {
     titulo = t;

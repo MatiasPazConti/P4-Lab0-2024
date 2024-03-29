@@ -1,6 +1,13 @@
 #include "../include/ChatGPT.hh"
 
-std::string ChatGPT::toString() {}
+std::string ChatGPT::toString() {
+    std::string retorno;
+   
+    retorno = "chatGPT: "+=to_string(getIdentificador()) +=", "+= getFecha().toString() +=", "+= getPregunta()+=", "+ getRespuesta(); 
+    return retorno;
+}
+
+
 void ChatGPT::setPregunta(std::string p)
 {
   pregunta = p;

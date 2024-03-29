@@ -1,6 +1,21 @@
 #include "../include/Libro.hh"
 
-std::string Libro::toString() {}
+
+
+std::string Libro::toString() {
+    std::string retorno;
+   
+    retorno = "Libro: "+=to_string(getIdentificador()) +=", "+= getFecha().toString() +=", "+= getTitulo()+="";
+    autores aut = getAutores();
+    for (std::set<std::string *>::iterator it = aut.begin(); it != aut.end(); ++it)
+  {
+    retorno = retorno +=", "+= *it; 
+  } 
+    retorno = retorno +=", "+= getResumen();
+    return retorno;
+}
+
+
 void Libro::setTitulo(std::string t)
 {
   titulo = t;
