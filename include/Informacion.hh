@@ -11,7 +11,7 @@ class Estudiante;
 
 class Informacion
 {
-private:
+protected:
   int identificador;
   DTFecha fecha;
   std::set<Estudiante *> guardadoPor;

@@ -20,7 +20,6 @@ Estudiante *Informacion::getEstudiante(int ci)
   return NULL;
 }
 
-
 void Informacion::setIdentificador(int i)
 {
   identificador = i;

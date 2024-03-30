@@ -18,27 +18,43 @@ DTFecha::DTFecha(int d, int m, int a)
   mes = m;
   anio = a;
 }
+
 DTFecha::~DTFecha() {}
 
-std::string toString(){
-  std::string retorno = to_string(dia) += "/" += to_string(mes) += "/" += to_string(anio);
+std::string DTFecha::toString()
+{
+  std::string retorno = std::to_string(dia) + "/" += std::to_string(mes) + "/" + std::to_string(anio);
   return retorno;
 }
 
-int compararFecha(DTFecha fecha){
-  if(anio > fecha.getAnio()){
+int DTFecha::compararFecha(DTFecha fecha)
+{
+  if (anio > fecha.getAnio())
+  {
     return 1;
-  }else if(anio < fecha.getAnio()){
+  }
+  else if (anio < fecha.getAnio())
+  {
     return -1;
-  }else if(mes > fecha.getMes()){
+  }
+  else if (mes > fecha.getMes())
+  {
     return 1;
-  }else if(mes < fecha.getMes()){
+  }
+  else if (mes < fecha.getMes())
+  {
     return -1;
-  }else if(dia > fecha.getDia()){
+  }
+  else if (dia > fecha.getDia())
+  {
     return 1;
-  }else if(dia < fecha.getDia()){
+  }
+  else if (dia < fecha.getDia())
+  {
     return -1;
-  }else{
+  }
+  else
+  {
     return 0;
   }
 };
