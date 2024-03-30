@@ -40,8 +40,10 @@ std::string Libro::getResumen()
 {
   return resumen;
 }
-Libro::Libro(std::string t, std::set<std::string> a, std::string r)
+Libro::Libro(int id, DTFecha fecha,std::string t, std::set<std::string> a, std::string r)
 {
+  identificador = id;
+  fecha = fecha;
   titulo = t;
   autores = a;
   resumen = r;

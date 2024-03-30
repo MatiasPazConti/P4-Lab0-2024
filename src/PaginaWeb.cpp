@@ -31,8 +31,10 @@ std::string PaginaWeb::getText()
 {
     return text;
 }
-PaginaWeb::PaginaWeb(std::string t, std::string l, std::string txt)
+PaginaWeb::PaginaWeb(int id, DTFecha fecha,std::string t, std::string l, std::string txt)
 {
+    identificador = id;
+    fecha = fecha;
     titulo = t;
     link = l;
     text = txt;

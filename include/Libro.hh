@@ -22,7 +22,7 @@ public:
     std::set<std::string> getAutores();
     std::string getResumen();
     Libro();
-    Libro(std::string, std::set<std::string>, std::string);
+    Libro(int,DTFecha,std::string, std::set<std::string>, std::string);
     ~Libro();
 };
 

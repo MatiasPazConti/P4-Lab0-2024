@@ -24,8 +24,10 @@ std::string ChatGPT::getRespuesta()
 {
   return respuesta;
 }
-ChatGPT::ChatGPT(std::string p, std::string r)
+ChatGPT::ChatGPT(int id,DTFecha fecha,std::string p, std::string r)
 {
+  identificador = id;
+  fecha = fecha;
   pregunta = p;
   respuesta = r;
 }
