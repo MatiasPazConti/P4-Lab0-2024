@@ -29,6 +29,7 @@ public:
   Informacion();
   Informacion(int, DTFecha);
   ~Informacion();
+  std::set<Estudiante *> getGuardadoPor();
 };
 
 #endif

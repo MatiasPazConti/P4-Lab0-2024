@@ -43,3 +43,8 @@ Informacion::Informacion(int i, DTFecha f)
   fecha = f;
 }
 Informacion::~Informacion() {}
+
+std::set<Estudiante *> Informacion::getGuardadoPor()
+{
+  return guardadoPor;
+};
