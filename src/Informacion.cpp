@@ -20,7 +20,6 @@ Estudiante *Informacion::getEstudiante(int ci)
   return NULL;
 }
 
-
 void Informacion::setIdentificador(int i)
 {
   identificador = i;
@@ -37,6 +36,7 @@ DTFecha Informacion::getFecha()
 {
   return fecha;
 }
+Informacion::Informacion() {}
 Informacion::Informacion(int i, DTFecha f)
 {
   identificador = i;

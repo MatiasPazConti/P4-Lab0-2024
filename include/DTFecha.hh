@@ -1,5 +1,6 @@
 #ifndef DT_FECHA
 #define DT_FECHA
+#include <iostream>
 
 class DTFecha
 {

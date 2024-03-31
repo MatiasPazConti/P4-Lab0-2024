@@ -1,54 +1,29 @@
-# Objetivo predeterminado
-all:	Main
+Main: obj/Main.o obj/DTFecha.o obj/Informacion.o obj/ChatGPT.o  obj/DTInfoEstudiante.o obj/Estudiante.o  obj/Libro.o obj/PaginaWeb.o 
+	g++ obj/Main.o obj/DTFecha.o obj/Informacion.o obj/ChatGPT.o  obj/DTInfoEstudiante.o obj/Estudiante.o  obj/Libro.o obj/PaginaWeb.o -o Main
 
-# Objetivos que no son archivos
-.PHONY:	clean	clean_bin
+obj/Main.o: Main.cpp
+	g++ -c Main.cpp -o obj/Main.o
 
-DT		= DTFecha DTInfoEstudiante
-MODULOS	= $(DT) ChatGPT Estudiante Informacion Libro PaginaWeb
+obj/DTFecha.o: src/DTFecha.cpp include/DTFecha.hh
+	g++ -c src/DTFecha.cpp -o obj/DTFecha.o
 
-# Directorios
-HDIR	= include
-CPPDIR	= src
-ODIR	= obj
+obj/Informacion.o: src/Informacion.cpp include/Informacion.hh
+	g++ -c src/Informacion.cpp -o obj/Informacion.o	
 
-# Extensión de los archivos
-HEAD	= hh	# Header: Puede ser H o HH
-EXT		= cpp
+obj/ChatGPT.o: src/ChatGPT.cpp include/ChatGPT.hh
+	g++ -c src/ChatGPT.cpp -o obj/ChatGPT.o
+	
+obj/DTInfoEstudiante.o: src/DTInfoEstudiante.cpp include/DTInfoEstudiante.hh
+	g++ -c src/DTInfoEstudiante.cpp -o obj/DTInfoEstudiante.o
 
-# Compilador
-CC	= g++
+obj/Estudiante.o: src/Estudiante.cpp include/Estudiante.hh
+	g++ -c src/Estudiante.cpp -o obj/Estudiante.o
 
-# Opciones de compilación
-CCFLAGS	= -Wall -Werror -I$(HDIR) -g
+obj/Libro.o: src/Libro.cpp include/Libro.hh
+	g++ -c src/Libro.cpp -o obj/Libro.o
 
-# Cadena de archivos, con directorio y extensión
-HS		= $(MODULOS:%=$(HDIR)%/.$(HEAD))
-CPPS	= $(MODULOS:%=$(CPPDIR)%/.$(EXT))
-OS		= $(MODULOS:%=$(ODIR)%/.o)
+obj/PaginaWeb.o: src/PaginaWeb.cpp include/PaginaWeb.hh
+	g++ -c src/PaginaWeb.cpp -o obj/PaginaWeb.o
 
-MAIN	= Main
-EXE		= Main	# Ejecutable
-
-# $@ se expande para transformarse en el objetivo
-# $< se expande para transformarse en la 1ra dependencia
-$(ODIR)/$(MAIN).o: $(MAIN).$(EXT)
-	@printf 'Compilando $(<) \n'; \
-	$(CC) $(CCFLAGS) -c $< -o $@
-
-$(ODIR)/%.o: $(CPPDIR)/%.$(EXT) $(HDIR)/%.$(HEAD)
-	@printf 'Compilando $(<) \n'; \
-	$(CC) $(CCFLAGS) -c $< -o $@
-
-# $^ se expande para transformarse en todas las dependencias
-$(EXE):$(ODIR)/$(MAIN).o $(OS)
-	@printf 'Compilando y enlazando $(@) \n'; \
-	$(CC) $(CCFLAGS) $^ -o $@
-
-# Borra binarios
-clean_bin:
-	@rm -f $(EXE) $(ODIR)/$(MAIN).o $(OS)
-
-# Borra binarios y copias de respaldo
-clean: clean_bin
-	@rm -f *~ $(HDIR)/*~ $(CPPDIR)/*~ $(ODIR)/*~
+clean:
+	@rm -f obj/*o Main

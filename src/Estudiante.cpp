@@ -1,4 +1,5 @@
 #include "../include/Estudiante.hh"
+
 void Estudiante::agregarInformacion(Informacion *i)
 {
   infoGuardada.insert(i);
@@ -18,21 +19,23 @@ Informacion *Estudiante::getInformacion(int id)
   }
   return NULL;
 }
-std::string Estudiante::toString() {}
+std::string Estudiante::toString()
+{
+  return "";
+}
 
 std::set<std::string> Estudiante::listarInfo(DTFecha desde)
 {
-  std::set<Informacion*> retorno;
+  std::set<std::string> retorno;
   for (std::set<Informacion *>::iterator it = infoGuardada.begin(); it != infoGuardada.end(); ++it)
   {
     if ((*it)->getFecha().compararFecha(desde) == 1)
     {
-      retorno.include(*it);
+      retorno.insert((*it)->toString());
     }
   }
   return retorno;
-} 
-
+}
 
 void Estudiante::setNombre(std::string n)
 {
@@ -58,6 +61,7 @@ std::string Estudiante::getEmail()
 {
   return email;
 }
+Estudiante::Estudiante() {}
 Estudiante::Estudiante(std::string n, int c, std::string e)
 {
   nombre = n;
@@ -65,4 +69,3 @@ Estudiante::Estudiante(std::string n, int c, std::string e)
   email = e;
 }
 Estudiante::~Estudiante() {}
-
