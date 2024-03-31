@@ -34,8 +34,8 @@ int main()
     // Fin crear Libro
 
     // Imprimir objetos
-    std::cout << pagina1.toString();
-    std::cout << pagina2.toString();
+    std::cout << pagina1.toString() << "\n";
+    std::cout << pagina2.toString() << "\n";
 
     // Crear estudiantes
     Estudiante estudiante1 = Estudiante("Alex Garcia", 52365899, "ag5678@gmail.com");
