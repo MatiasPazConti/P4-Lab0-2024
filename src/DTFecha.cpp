@@ -12,6 +12,9 @@ int DTFecha::getAnio()
 {
   return anio;
 }
+
+DTFecha::DTFecha() {}
+
 DTFecha::DTFecha(int d, int m, int a)
 {
   dia = d;
@@ -23,7 +26,7 @@ DTFecha::~DTFecha() {}
 
 std::string DTFecha::toString()
 {
-  std::string retorno = std::to_string(dia) + "/" += std::to_string(mes) + "/" + std::to_string(anio);
+  std::string retorno = std::to_string(dia) + "/" + std::to_string(mes) + "/" + std::to_string(anio);
   return retorno;
 }
 

@@ -23,6 +23,7 @@ std::string ChatGPT::getRespuesta()
 {
   return respuesta;
 }
+ChatGPT::ChatGPT() {}
 ChatGPT::ChatGPT(int id, DTFecha f, std::string p, std::string r)
 {
   identificador = id;

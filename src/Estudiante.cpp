@@ -19,7 +19,10 @@ Informacion *Estudiante::getInformacion(int id)
   }
   return NULL;
 }
-std::string Estudiante::toString() {}
+std::string Estudiante::toString()
+{
+  return "";
+}
 
 std::set<std::string> Estudiante::listarInfo(DTFecha desde)
 {
@@ -58,6 +61,7 @@ std::string Estudiante::getEmail()
 {
   return email;
 }
+Estudiante::Estudiante() {}
 Estudiante::Estudiante(std::string n, int c, std::string e)
 {
   nombre = n;

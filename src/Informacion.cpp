@@ -36,6 +36,7 @@ DTFecha Informacion::getFecha()
 {
   return fecha;
 }
+Informacion::Informacion() {}
 Informacion::Informacion(int i, DTFecha f)
 {
   identificador = i;

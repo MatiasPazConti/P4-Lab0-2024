@@ -38,6 +38,7 @@ std::string Libro::getResumen()
 {
   return resumen;
 }
+Libro::Libro() {}
 Libro::Libro(int id, DTFecha f, std::string t, std::set<std::string> a, std::string r)
 {
   identificador = id;

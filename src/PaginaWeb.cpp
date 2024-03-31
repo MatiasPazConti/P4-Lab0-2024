@@ -32,6 +32,8 @@ std::string PaginaWeb::getText()
 {
     return text;
 }
+PaginaWeb::PaginaWeb() {}
+
 PaginaWeb::PaginaWeb(int id, DTFecha f, std::string t, std::string l, std::string txt)
 {
     identificador = id;
