@@ -24,3 +24,9 @@ void DTInfoEstudiante::setPrint(std::ostream &out)
 {
   out << ci << ", " << nombreEst << ", " << identificadorInfo;
 }
+
+std::ostream &operator<<(std::ostream &out, DTInfoEstudiante &obj)
+{
+  obj.setPrint(out);
+  return out;
+}

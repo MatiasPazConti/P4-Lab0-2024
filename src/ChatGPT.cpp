@@ -31,4 +31,7 @@ ChatGPT::ChatGPT(int id, DTFecha f, std::string p, std::string r)
   pregunta = p;
   respuesta = r;
 }
-ChatGPT::~ChatGPT() {}
+ChatGPT::~ChatGPT()
+{
+  Informacion::~Informacion();
+}

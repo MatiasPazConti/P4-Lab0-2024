@@ -42,4 +42,7 @@ PaginaWeb::PaginaWeb(int id, DTFecha f, std::string t, std::string l, std::strin
     link = l;
     text = txt;
 }
-PaginaWeb::~PaginaWeb() {}
+PaginaWeb::~PaginaWeb()
+{
+    Informacion::~Informacion();
+}

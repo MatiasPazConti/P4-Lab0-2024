@@ -26,4 +26,4 @@ obj/PaginaWeb.o: src/PaginaWeb.cpp include/PaginaWeb.hh
 	g++ -c src/PaginaWeb.cpp -o obj/PaginaWeb.o
 
 clean:
-	@rm -f obj/*o Main
+	@rm -f obj/*.o Main
