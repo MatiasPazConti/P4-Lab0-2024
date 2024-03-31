@@ -5,6 +5,7 @@
 #include "./Estudiante.hh"
 
 #include <iostream>
+#include <string>
 #include <set>
 
 class Estudiante;
@@ -28,7 +29,7 @@ public:
   DTFecha getFecha();
   Informacion();
   Informacion(int, DTFecha);
-  ~Informacion();
+  virtual ~Informacion();
   std::set<Estudiante *> getGuardadoPor();
 };
 

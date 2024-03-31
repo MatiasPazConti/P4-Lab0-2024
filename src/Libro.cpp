@@ -47,4 +47,13 @@ Libro::Libro(int id, DTFecha f, std::string t, std::set<std::string> a, std::str
   autores = a;
   resumen = r;
 }
-Libro::~Libro() {}
+Libro::~Libro()
+{
+  std::set<std::string>::iterator it = autores.begin();
+  while (!autores.empty())
+  {
+    autores.erase(it);
+    it = autores.begin();
+  }
+  Informacion::~Informacion();
+}

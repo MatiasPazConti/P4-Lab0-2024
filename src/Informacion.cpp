@@ -42,7 +42,16 @@ Informacion::Informacion(int i, DTFecha f)
   identificador = i;
   fecha = f;
 }
-Informacion::~Informacion() {}
+Informacion::~Informacion()
+{
+  std::set<Estudiante *>::iterator it = guardadoPor.begin();
+  while (!guardadoPor.empty())
+  {
+    (*it)->eliminarInformacion(this);
+    guardadoPor.erase(it);
+    it = guardadoPor.begin();
+  }
+}
 
 std::set<Estudiante *> Informacion::getGuardadoPor()
 {

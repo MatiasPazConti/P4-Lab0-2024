@@ -72,4 +72,13 @@ Estudiante::Estudiante(std::string n, int c, std::string e)
   ci = c;
   email = e;
 }
-Estudiante::~Estudiante() {}
+Estudiante::~Estudiante()
+{
+  std::set<Informacion *>::iterator it = infoGuardada.begin();
+  while (!infoGuardada.empty())
+  {
+    (*it)->eliminarEstudiante(this);
+    infoGuardada.erase(it);
+    it = infoGuardada.begin();
+  }
+}
