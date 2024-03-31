@@ -67,11 +67,13 @@ int main()
     // Fin crear Libro
 
     // Imprimir objetos
+
     /*std::cout << pagina1.toString() << "\n";
     std::cout << pagina2.toString() << "\n";
     std::cout << chat1.toString() << "\n";
     std::cout << chat2.toString() << "\n";
     std::cout << libro.toString() << "\n";*/
+
 
     // Crear estudiantes
     Estudiante estudiante1 = Estudiante("Alex Garcia", 52365899, "ag5678@gmail.com");
