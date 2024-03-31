@@ -19,9 +19,13 @@ Informacion *Estudiante::getInformacion(int id)
   }
   return NULL;
 }
+
+// Estudiante toStrign
 std::string Estudiante::toString()
 {
-  return "";
+  std::string retorno;
+  retorno = "Estudiante: " + nombre + ", " + std::to_string(ci) + ", " + email;
+  return retorno;
 }
 
 std::set<std::string> Estudiante::listarInfo(DTFecha desde)
